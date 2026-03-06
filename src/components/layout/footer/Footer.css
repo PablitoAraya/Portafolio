@@ -1,10 +1,23 @@
-/* src/components/layout/Footer/Footer.css */
 .footer {
-  border-top: 1px solid var(--border);
-  background: rgba(15, 23, 42, 0.55);
+  position: relative;
+  border-top: 1px solid rgba(125, 211, 252, 0.1);
+  background:
+    radial-gradient(circle at top center, rgba(56, 189, 248, 0.08), transparent 30%),
+    rgba(15, 23, 42, 0.58);
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(125, 211, 252, 0.04), transparent);
+  pointer-events: none;
 }
 
 .footer__inner {
+  position: relative;
+  z-index: 1;
   max-width: var(--container);
   margin: 0 auto;
   padding: 28px 20px;

@@ -1,13 +1,25 @@
 import "./Footer.css";
+import { motion } from "motion/react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.6 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="footer__inner">
-        <span>© 2026 Jose Pablo Araya</span>
-        <span className="footer__muted">Built with React</span>
+        <motion.span whileHover={{ y: -1 }}>
+          © 2026 Jose Pablo Araya
+        </motion.span>
+
+        <motion.span className="footer__muted" whileHover={{ y: -1 }}>
+          Built with React
+        </motion.span>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
