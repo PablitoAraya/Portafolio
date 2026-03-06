@@ -1,0 +1,29 @@
+/* src/components/sections/Projects/Projects.css */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.projects__title {
+  margin: 0 0 10px 0;
+  font-weight: 900;
+}
+
+.projects__desc {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.projects__tech {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

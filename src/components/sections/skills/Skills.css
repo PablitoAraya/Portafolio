@@ -1,0 +1,23 @@
+/* src/components/sections/Skills/Skills.css */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skills__h3 {
+  margin: 0 0 10px 0;
+  font-weight: 800;
+}
+
+.skills__p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}

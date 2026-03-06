@@ -1,0 +1,29 @@
+/* src/components/sections/Contact/Contact.css */
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.contact__item {
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(148, 163, 184, 0.06);
+  color: var(--muted);
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact__item:hover {
+  color: var(--text);
+  background: rgba(148, 163, 184, 0.10);
+}
+
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}

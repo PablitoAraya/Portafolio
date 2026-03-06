@@ -1,0 +1,27 @@
+/* src/components/layout/Footer/Footer.css */
+.footer {
+  border-top: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.footer__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer__muted {
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .footer__inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

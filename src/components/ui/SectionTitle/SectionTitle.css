@@ -1,0 +1,17 @@
+/* src/components/ui/SectionTitle/SectionTitle.css */
+.sectionTitle {
+  margin-bottom: 34px;
+}
+
+.sectionTitle__h2 {
+  font-size: 34px;
+  margin: 0 0 10px 0;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.sectionTitle__p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 720px;
+}
