@@ -11,12 +11,12 @@ const Contact = () => {
       />
 
       <div className="contact__grid">
-        <a className="contact__item" href="mailto:tuemail@email.com">tuemail@email.com</a>
+        <a className="contact__item" href="mailto:pabloarsol@email.com">pabloarsol@email.com</a>
         <a className="contact__item" href="https://www.linkedin.com/in/jose-pablo-araya-solis-18a4951b7/" target="_blank" rel="noreferrer">
-          linkedin.com/in/tuusuario
+          linkedin.com/in/jose-pablo-araya-solis
         </a>
-        <a className="contact__item" href="https://github.com/tuusuario" target="_blank" rel="noreferrer">
-          github.com/tuusuario
+        <a className="contact__item" href="https://github.com/PablitoAraya?tab=repositories" target="_blank" rel="noreferrer">
+          github.com/PablitoAraya
         </a>
       </div>
     </section>

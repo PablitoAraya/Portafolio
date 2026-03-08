@@ -16,6 +16,7 @@
   margin: 0;
   font-weight: 950;
   letter-spacing: -0.3px;
+  color: var(--text);
 }
 
 .experience__role {
@@ -25,11 +26,11 @@
 }
 
 .experience__period {
-  color: rgba(234, 240, 255, 0.62);
+  color: var(--text-soft);
   font-weight: 900;
   font-size: 12px;
-  border: 1px solid var(--border);
-  background: rgba(148, 163, 184, 0.06);
+  border: 1px solid rgba(139, 124, 255, 0.16);
+  background: rgba(139, 124, 255, 0.08);
   padding: 8px 10px;
   border-radius: 999px;
   white-space: nowrap;
@@ -52,8 +53,8 @@
 .experience__tag {
   padding: 8px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(125, 211, 252, 0.18);
-  background: rgba(125, 211, 252, 0.08);
+  border: 1px solid rgba(94, 234, 212, 0.16);
+  background: rgba(94, 234, 212, 0.08);
   color: var(--text);
   font-weight: 900;
   font-size: 12px;

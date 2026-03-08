@@ -1,25 +1,34 @@
-/* src/components/sections/Contact/Contact.css */
 .contact__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 16px;
 }
 
 .contact__item {
-  padding: 14px 14px;
-  border-radius: 14px;
+  padding: 16px 16px;
+  border-radius: 16px;
   border: 1px solid var(--border);
-  background: rgba(148, 163, 184, 0.06);
-  color: var(--muted);
+  background: linear-gradient(180deg, rgba(28, 34, 56, 0.9), rgba(18, 24, 41, 0.92));
+  color: var(--muted-strong);
   font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
 }
 
 .contact__item:hover {
   color: var(--text);
-  background: rgba(148, 163, 184, 0.10);
+  transform: translateY(-3px);
+  border-color: rgba(139, 124, 255, 0.2);
+  background: linear-gradient(180deg, rgba(34, 40, 64, 0.96), rgba(20, 27, 45, 0.96));
+  box-shadow: var(--glow-primary);
 }
 
 @media (max-width: 900px) {

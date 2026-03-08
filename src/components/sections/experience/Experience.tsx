@@ -1,7 +1,15 @@
 import SectionTitle from "../../ui/SectionTitle/SectionTitle";
-import Card from "../../ui/Card/Card";
+import Card from "../../ui/card/Card";
 import "./Experience.css";
 import { useLanguage } from "../../../i18n/LanguageProvider";
+
+type ExperienceItem = {
+  company: string;
+  role: string;
+  period: string;
+  bullets: string[];
+  stack: string[];
+};
 
 const Experience = () => {
   const { t } = useLanguage();
@@ -11,7 +19,7 @@ const Experience = () => {
       <SectionTitle title={t.experience.title} subtitle={t.experience.subtitle} />
 
       <div className="experience__grid">
-        {t.experience.items.map((item: any, idx: number) => (
+        {t.experience.items.map((item: ExperienceItem, idx: number) => (
           <Card key={idx}>
             <div className="experience__header">
               <div>
@@ -29,7 +37,9 @@ const Experience = () => {
 
             <div className="experience__tags">
               {item.stack.map((s: string, i: number) => (
-                <span key={i} className="experience__tag">{s}</span>
+                <span key={i} className="experience__tag">
+                  {s}
+                </span>
               ))}
             </div>
           </Card>

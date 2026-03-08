@@ -1,9 +1,10 @@
 .footer {
   position: relative;
-  border-top: 1px solid rgba(125, 211, 252, 0.1);
+  border-top: 1px solid var(--border);
   background:
-    radial-gradient(circle at top center, rgba(56, 189, 248, 0.08), transparent 30%),
-    rgba(15, 23, 42, 0.58);
+    radial-gradient(circle at top center, rgba(139, 124, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(94, 234, 212, 0.08), transparent 22%),
+    linear-gradient(180deg, rgba(14, 18, 31, 0.92), rgba(10, 13, 22, 0.96));
   overflow: hidden;
 }
 
@@ -11,7 +12,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(125, 211, 252, 0.04), transparent);
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
   pointer-events: none;
 }
 
@@ -29,7 +31,8 @@
 }
 
 .footer__muted {
-  opacity: 0.9;
+  color: var(--text-soft);
+  opacity: 0.8;
 }
 
 @media (max-width: 640px) {

@@ -1,21 +1,21 @@
 .hero {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 22px;
+  gap: 26px;
   align-items: center;
 }
 
 .hero__badge {
   display: inline-flex;
-  padding: 7px 12px;
+  padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(125, 211, 252, 0.1);
-  border: 1px solid rgba(125, 211, 252, 0.22);
+  background: rgba(139, 124, 255, 0.12);
+  border: 1px solid rgba(139, 124, 255, 0.22);
   color: var(--primary);
   font-weight: 900;
   letter-spacing: 0.3px;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.06), 0 10px 30px rgba(14, 165, 233, 0.08);
+  box-shadow: 0 0 0 1px rgba(139, 124, 255, 0.06), 0 10px 28px rgba(109, 94, 247, 0.14);
 }
 
 .hero__title {
@@ -23,11 +23,12 @@
   line-height: 1.02;
   margin: 0 0 12px 0;
   letter-spacing: -1px;
+  color: var(--text);
 }
 
 .hero__role {
   margin: 0 0 16px 0;
-  color: var(--primary-600);
+  color: var(--warm);
   font-weight: 900;
   font-size: 18px;
 }
@@ -36,7 +37,7 @@
   margin: 0 0 26px 0;
   color: var(--muted);
   max-width: 620px;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .hero__actions {
@@ -49,31 +50,38 @@
 .hero__ghost {
   padding: 12px 16px;
   border-radius: 14px;
-  border: 1px solid rgba(125, 211, 252, 0.14);
-  background: rgba(148, 163, 184, 0.05);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   font-weight: 800;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .hero__ghost:hover {
-  background: rgba(148, 163, 184, 0.09);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(94, 234, 212, 0.2);
+  box-shadow: var(--glow-accent);
 }
 
 .hero__hint {
   margin-top: 18px;
-  color: rgba(234, 240, 255, 0.55);
+  color: rgba(219, 228, 255, 0.56);
   font-size: 13px;
 }
 
 .hero__panel {
   position: relative;
-  border: 1px solid rgba(125, 211, 252, 0.12);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.74));
+    linear-gradient(180deg, rgba(28, 34, 56, 0.96), rgba(18, 24, 41, 0.96));
   box-shadow:
-    0 24px 50px rgba(2, 6, 23, 0.35),
+    var(--shadow-lg),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   overflow: hidden;
 }
@@ -81,27 +89,30 @@
 .hero__panelGlow {
   position: absolute;
   inset: -25%;
-  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.22), transparent 40%);
-  filter: blur(24px);
+  background:
+    radial-gradient(circle at top right, rgba(139, 124, 255, 0.22), transparent 38%),
+    radial-gradient(circle at bottom left, rgba(94, 234, 212, 0.12), transparent 28%);
+  filter: blur(28px);
   pointer-events: none;
 }
 
 .hero__panelInner {
   position: relative;
   z-index: 1;
-  padding: 22px;
+  padding: 24px;
 }
 
 .hero__panelTitle {
   margin: 0 0 10px 0;
   font-weight: 900;
+  color: var(--text);
 }
 
 .hero__list {
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
-  line-height: 1.9;
+  line-height: 1.95;
 }
 
 @media (max-width: 940px) {

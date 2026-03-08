@@ -7,14 +7,12 @@ html {
 }
 
 body {
-  margin: 0;
-  font-family: var(--font);
-  color: var(--text);
   background:
-    radial-gradient(900px 500px at 15% -10%, rgba(125, 211, 252, 0.18), transparent 55%),
-    radial-gradient(700px 450px at 85% 0%, rgba(56, 189, 248, 0.14), transparent 55%),
-    radial-gradient(900px 600px at 50% 110%, rgba(14, 165, 233, 0.10), transparent 60%),
+    radial-gradient(circle at top left, rgba(139, 124, 255, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(94, 234, 212, 0.10), transparent 24%),
+    radial-gradient(circle at bottom center, rgba(255, 184, 107, 0.08), transparent 22%),
     var(--bg);
+  color: var(--text);
 }
 
 a {

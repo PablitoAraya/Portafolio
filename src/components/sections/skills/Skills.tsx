@@ -1,30 +1,32 @@
-// src/components/sections/Skills/Skills.jsx
 import SectionTitle from "../../ui/SectionTitle/SectionTitle";
-import Card from "../../ui/Card/Card";
+import Card from "../../ui/card/Card";
 import { skills } from "../../../data/skills";
+import { useLanguage } from "../../../i18n/LanguageProvider";
 import "./Skills.css";
 
 const Skills = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="section">
       <SectionTitle
-        title="Habilidades"
-        subtitle="Stack principal y herramientas con las que trabajo en el día a día."
+        title={t.skills.title}
+        subtitle={t.skills.subtitle}
       />
 
       <div className="skills__grid">
         <Card>
-          <h3 className="skills__h3">Frontend</h3>
+          <h3 className="skills__h3">{t.skills.frontend}</h3>
           <p className="skills__p">{skills.frontend.join(" • ")}</p>
         </Card>
 
         <Card>
-          <h3 className="skills__h3">Backend</h3>
+          <h3 className="skills__h3">{t.skills.backend}</h3>
           <p className="skills__p">{skills.backend.join(" • ")}</p>
         </Card>
 
         <Card>
-          <h3 className="skills__h3">Base de Datos</h3>
+          <h3 className="skills__h3">{t.skills.database}</h3>
           <p className="skills__p">{skills.database.join(" • ")}</p>
         </Card>
       </div>
