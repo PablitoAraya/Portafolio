@@ -47,10 +47,15 @@ export type Dictionary = {
     database: string;
   };
 
-  projects: {
+   projects: {
     title: string;
     subtitle: string;
     tech: string;
+    items: {
+      title: string;
+      description: string;
+      tech: string[];
+    }[];
   };
 
   contact: {

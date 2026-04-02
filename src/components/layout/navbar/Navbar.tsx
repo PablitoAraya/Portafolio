@@ -1,6 +1,8 @@
 import "./Navbar.css";
 import { useLanguage } from "../../../i18n/LanguageProvider";
 import { motion, type Variants } from "motion/react";
+import { useEffect, useRef } from "react";
+import { animate, createScope, stagger } from "animejs";
 
 const navContainer: Variants = {
   hidden: { opacity: 0, y: -24 },
@@ -29,9 +31,35 @@ const navItem: Variants = {
 
 const Navbar = () => {
   const { locale, setLocale, t } = useLanguage();
+  const rootRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!rootRef.current) return;
+
+    const scope = createScope({ root: rootRef }).add(() => {
+      animate(".navbar__brandGlow", {
+        scale: [0.95, 1.08, 0.95],
+        opacity: [0.45, 0.8, 0.45],
+        duration: 3200,
+        ease: "inOutSine",
+        loop: true,
+      });
+
+      animate(".navbar__link", {
+        translateY: [10, 0],
+        opacity: [0, 1],
+        delay: stagger(70),
+        duration: 700,
+        ease: "outExpo",
+      });
+    });
+
+    return () => scope.revert();
+  }, []);
 
   return (
     <motion.header
+      ref={rootRef}
       className="navbar"
       variants={navContainer}
       initial="hidden"
@@ -41,7 +69,7 @@ const Navbar = () => {
         <motion.a
           className="navbar__brand"
           href="#top"
-          aria-label="Go to top"
+          aria-label="Ir arriba"
           variants={navItem}
           whileHover={{ y: -2, scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
@@ -52,7 +80,7 @@ const Navbar = () => {
 
         <motion.nav
           className="navbar__links"
-          aria-label="Primary"
+          aria-label="Principal"
           variants={navItem}
         >
           <motion.a className="navbar__link" href="#about" whileHover={{ y: -2 }}>
@@ -77,7 +105,7 @@ const Navbar = () => {
             className="lang"
             type="button"
             onClick={() => setLocale(locale === "en" ? "es" : "en")}
-            aria-label="Toggle language"
+            aria-label="Cambiar idioma"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

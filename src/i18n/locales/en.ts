@@ -90,8 +90,28 @@ const en = {
 
   projects: {
     title: "Projects",
-    subtitle: "Solutions focused on usability, integration quality and business value.",
-    tech: "Tech stack"
+    subtitle: "Solutions focused on usability, solid integration and real business value.",
+    tech: "Tech stack",
+    items: [
+      {
+        title: "ID Reader System",
+        description:
+          "Platform designed to read identification cards across mobile and desktop environments. It supports data capture through the device camera or a USB-connected card reader on Windows, enables attendance tracking for events, and includes fully dynamic web forms for participant registration. The solution was built with Flutter as the main frontend, React for web forms, and a layered .NET backend.",
+        tech: ["Flutter", "React", ".NET", "SQL Server", "REST APIs", "Windows USB"]
+      },
+      {
+        title: "Payment Gateway",
+        description:
+          "Web-based payment solution focused on enabling online transactions through integration with Lafise banking APIs. The project was designed to provide a clear and reliable payment experience from the website, connecting a React frontend with backend services prepared for secure communication with the financial institution.",
+        tech: ["React", ".NET", "REST APIs", "Banking integration", "Web payments"]
+      },
+      {
+        title: "Rewards Management System",
+        description:
+          "Web platform for rewards inventory and delivery management, built to track available stock, register item movements and streamline the delivery process from a centralized interface. The UI was developed in React and the backend in .NET, ensuring a structured and traceable operation.",
+        tech: ["React", ".NET", "SQL Server", "Inventory", "Delivery management"]
+      }
+    ]
   },
 
   contact: {

@@ -1,7 +1,7 @@
 .about__grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 30px;
+  grid-template-columns: 380px 1fr;
+  gap: 34px;
   align-items: start;
 }
 
@@ -12,130 +12,241 @@
 
 .about__avatarWrap {
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(24, 30, 49, 0.96), rgba(14, 18, 31, 0.94));
+  border: 1px solid var(--panel-stroke);
+  background: var(--panel-bg);
   box-shadow:
     var(--shadow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    inset 0 1px 0 var(--panel-highlight);
   padding: 14px;
   overflow: hidden;
+  transform-style: preserve-3d;
 }
 
 .about__avatar {
   position: relative;
   width: 100%;
-  height: 390px;
+  height: 430px;
   border-radius: calc(var(--radius-lg) - 8px);
-  border: 1px solid rgba(139, 124, 255, 0.2);
+  border: 1px solid var(--primary-border);
   background:
-    radial-gradient(circle at center, rgba(139, 124, 255, 0.18), transparent 58%),
-    radial-gradient(circle at 20% 20%, rgba(94, 234, 212, 0.08), transparent 22%),
-    linear-gradient(180deg, rgba(18, 24, 41, 0.95), rgba(10, 13, 22, 0.98));
+    radial-gradient(circle at 50% 25%, rgba(201, 123, 99, 0.12), transparent 30%),
+    radial-gradient(circle at 18% 18%, rgba(143, 166, 142, 0.10), transparent 24%),
+    radial-gradient(circle at 78% 82%, rgba(216, 180, 138, 0.10), transparent 24%),
+    var(--gradient-card);
   overflow: hidden;
+  isolation: isolate;
 }
 
 .about__avatarGlow {
   position: absolute;
-  inset: -28%;
+  inset: -24%;
   background:
-    radial-gradient(circle, rgba(139, 124, 255, 0.24), transparent 45%),
-    radial-gradient(circle at 70% 30%, rgba(94, 234, 212, 0.12), transparent 20%);
-  filter: blur(28px);
+    radial-gradient(circle at 50% 35%, rgba(201, 123, 99, 0.18), transparent 30%),
+    radial-gradient(circle at 70% 30%, rgba(143, 166, 142, 0.14), transparent 24%);
+  filter: blur(32px);
+  z-index: 0;
 }
 
-.about__ring {
-  position: absolute;
-  border-radius: 999px;
-  border: 1px solid rgba(139, 124, 255, 0.16);
-}
-
-.about__ring--one {
-  width: 250px;
-  height: 250px;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.about__ring--two {
-  width: 185px;
-  height: 185px;
-  top: 92px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-style: dashed;
-  border-color: rgba(94, 234, 212, 0.16);
-}
-
-.about__orb {
-  position: absolute;
-  border-radius: 999px;
-  box-shadow: 0 0 18px rgba(139, 124, 255, 0.28);
-}
-
-.about__orb--one {
-  width: 12px;
-  height: 12px;
-  top: 82px;
-  right: 78px;
-  background: radial-gradient(circle, rgba(139, 124, 255, 0.95), rgba(109, 94, 247, 0.28));
-}
-
-.about__orb--two {
-  width: 10px;
-  height: 10px;
-  bottom: 100px;
-  left: 82px;
-  background: radial-gradient(circle, rgba(94, 234, 212, 0.92), rgba(45, 212, 191, 0.22));
-}
-
-.about__silhouette {
+.about__noise {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-}
-
-.about__head {
-  position: absolute;
-  top: 106px;
-  width: 76px;
-  height: 76px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(139, 124, 255, 0.42));
-  box-shadow: 0 0 26px rgba(139, 124, 255, 0.18);
-  opacity: 0.92;
-}
-
-.about__body {
-  position: absolute;
-  top: 168px;
-  width: 170px;
-  height: 150px;
-  border-radius: 90px 90px 30px 30px;
-  background: linear-gradient(180deg, rgba(139, 124, 255, 0.18), rgba(94, 234, 212, 0.06));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(4px);
-}
-
-.about__scan {
-  position: absolute;
-  left: 8%;
-  width: 84%;
-  height: 42px;
-  background: linear-gradient(180deg, transparent, rgba(255, 184, 107, 0.12), transparent);
-  filter: blur(2px);
-  opacity: 0.7;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 0.7px, transparent 0.7px);
+  background-size: 9px 9px;
+  opacity: 0.06;
+  mix-blend-mode: soft-light;
+  z-index: 0;
 }
 
 .about__gridFx {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 28px 28px;
+    linear-gradient(var(--fx-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fx-grid-line) 1px, transparent 1px);
+  background-size: 26px 26px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 95%);
+  z-index: 0;
+}
+
+.about__ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.about__ring--one {
+  width: 270px;
+  height: 270px;
+  border: 1px solid var(--primary-border);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  z-index: 1;
+}
+
+.about__ring--two {
+  width: 208px;
+  height: 208px;
+  border: 1px dashed var(--accent-border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.about__orb {
+  position: absolute;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.about__orb--one {
+  width: 14px;
+  height: 14px;
+  top: 76px;
+  right: 66px;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 72%);
+  box-shadow: var(--glow-primary);
+}
+
+.about__orb--two {
+  width: 12px;
+  height: 12px;
+  bottom: 90px;
+  left: 70px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 72%);
+  box-shadow: var(--glow-accent);
+}
+
+.about__orb--three {
+  width: 10px;
+  height: 10px;
+  top: 120px;
+  left: 86px;
+  background: radial-gradient(circle, var(--warm) 0%, transparent 72%);
+  box-shadow: 0 0 20px rgba(216, 180, 138, 0.3);
+}
+
+.about__scan {
+  position: absolute;
+  left: 8%;
+  width: 84%;
+  height: 48px;
+  background: var(--fx-scan-line);
+  filter: blur(6px);
+  opacity: 0.65;
+  z-index: 2;
+}
+
+.about__center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+}
+
+.about__identityCard {
+  position: relative;
+  width: 210px;
+  height: 250px;
+  border-radius: 28px;
+  border: 1px solid rgba(201, 123, 99, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.78), rgba(245, 237, 228, 0.68));
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 24px 60px rgba(88, 68, 52, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  padding: 18px;
+  overflow: hidden;
+}
+
+.about__identityGlow {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at top, rgba(201, 123, 99, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(143, 166, 142, 0.16), transparent 26%);
+  filter: blur(20px);
+}
+
+.about__identityTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about__identityEyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+  color: var(--primary-700);
+}
+
+.about__identityDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: var(--glow-accent);
+}
+
+.about__identityMark {
+  position: relative;
+  z-index: 1;
+  margin-top: 26px;
+  font-size: 4.2rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  color: var(--text);
+}
+
+.about__identityMeta {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about__identityMeta span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--primary-border);
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-soft);
+}
+
+.about__floatingBadge {
+  position: absolute;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 250, 243, 0.72);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    var(--shadow-sm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.about__floatingBadge--one {
+  top: 78px;
+  left: 34px;
+}
+
+.about__floatingBadge--two {
+  right: 26px;
+  bottom: 76px;
 }
 
 .about__chips {
@@ -148,12 +259,12 @@
 .about__chip {
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(139, 124, 255, 0.16);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--primary-border);
+  background: var(--glass-soft);
   color: var(--muted-strong);
   font-weight: 800;
   font-size: 12px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .about__text {
@@ -173,28 +284,35 @@
   }
 
   .about__avatar {
-    height: 320px;
+    height: 360px;
   }
 
   .about__ring--one {
     width: 220px;
     height: 220px;
-    top: 48px;
   }
 
   .about__ring--two {
-    width: 160px;
-    height: 160px;
-    top: 78px;
+    width: 172px;
+    height: 172px;
   }
 
-  .about__head {
-    top: 92px;
+  .about__identityCard {
+    width: 185px;
+    height: 220px;
   }
 
-  .about__body {
-    top: 150px;
-    width: 150px;
-    height: 130px;
+  .about__identityMark {
+    font-size: 3.4rem;
+  }
+
+  .about__floatingBadge--one {
+    top: 54px;
+    left: 20px;
+  }
+
+  .about__floatingBadge--two {
+    right: 18px;
+    bottom: 48px;
   }
 }

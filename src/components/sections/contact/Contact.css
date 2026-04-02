@@ -5,16 +5,18 @@
 }
 
 .contact__item {
-  padding: 16px 16px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(28, 34, 56, 0.9), rgba(18, 24, 41, 0.92));
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-stroke);
+  background: var(--panel-card-bg);
   color: var(--muted-strong);
   font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    var(--shadow-sm),
+    inset 0 1px 0 var(--panel-highlight);
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -26,8 +28,8 @@
 .contact__item:hover {
   color: var(--text);
   transform: translateY(-3px);
-  border-color: rgba(139, 124, 255, 0.2);
-  background: linear-gradient(180deg, rgba(34, 40, 64, 0.96), rgba(20, 27, 45, 0.96));
+  border-color: var(--primary-border-strong);
+  background: linear-gradient(180deg, var(--card) 0%, var(--bg-elevated) 100%);
   box-shadow: var(--glow-primary);
 }
 

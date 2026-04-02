@@ -90,8 +90,28 @@ const es = {
 
   projects: {
     title: "Proyectos",
-    subtitle: "Soluciones enfocadas en usabilidad, calidad de integración y valor de negocio.",
-    tech: "Tecnologías"
+    subtitle: "Soluciones enfocadas en usabilidad, integración sólida y valor real para el negocio.",
+    tech: "Tecnologías",
+    items: [
+      {
+        title: "Sistema lector de cédulas",
+        description:
+          "Plataforma para lectura de cédulas en dispositivos móviles y entornos desktop. Permite capturar información desde cámara o mediante lector conectado por USB en Windows, registrar asistencia a actividades y gestionar formularios web dinámicos para inscripción de participantes. La solución fue desarrollada con Flutter en frontend principal, React para formularios web y .NET por capas en backend.",
+        tech: ["Flutter", "React", ".NET", "SQL Server", "APIs REST", "Windows USB"]
+      },
+      {
+        title: "Pasarela de pagos",
+        description:
+          "Aplicación web orientada al procesamiento de pagos en línea, integrada con la API bancaria de Lafise. El proyecto se enfocó en ofrecer una experiencia de pago clara y confiable desde la web, conectando el frontend en React con servicios backend preparados para la comunicación segura con la entidad financiera.",
+        tech: ["React", ".NET", "APIs REST", "Integración bancaria", "Pagos web"]
+      },
+      {
+        title: "Sistema de regalías",
+        description:
+          "Sistema web para la administración y entrega de regalías, diseñado para mantener control del inventario disponible, registrar movimientos y facilitar la gestión de entrega desde la plataforma. La interfaz fue desarrollada en React y el backend en .NET, asegurando una operación ordenada y trazable.",
+        tech: ["React", ".NET", "SQL Server", "Inventario", "Gestión de entregas"]
+      }
+    ]
   },
 
   contact: {

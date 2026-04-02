@@ -1,41 +1,41 @@
 :root {
-  --bg: #0c0c0d;
-  --bg-elevated: #151618;
+  --bg: #fcfaf6;
+  --bg-elevated: #f6f1e8;
 
-  --surface: rgba(22, 22, 24, 0.82);
-  --surface-strong: rgba(28, 29, 32, 0.94);
-  --card: rgba(24, 25, 28, 0.9);
-  --card-soft: rgba(30, 31, 35, 0.74);
+  --surface: rgba(255, 252, 246, 0.82);
+  --surface-strong: rgba(248, 242, 234, 0.94);
+  --card: rgba(255, 250, 243, 0.92);
+  --card-soft: rgba(246, 239, 230, 0.76);
 
-  --text: #f5f3ef;
-  --text-soft: #e5ddd2;
-  --muted: rgba(229, 221, 210, 0.68);
-  --muted-strong: rgba(229, 221, 210, 0.82);
+  --text: #2c241d;
+  --text-soft: #4a4037;
+  --muted: rgba(74, 64, 55, 0.68);
+  --muted-strong: rgba(74, 64, 55, 0.82);
 
-  --primary: #c7a86b;
-  --primary-500: #b99657;
-  --primary-600: #9f7f44;
-  --primary-700: #866935;
+  --primary: #c97b63;
+  --primary-500: #bb6c54;
+  --primary-600: #a95c46;
+  --primary-700: #8e4c39;
 
-  --accent: #8f949b;
-  --accent-600: #777d84;
+  --accent: #8fa68e;
+  --accent-600: #7c927b;
 
-  --warm: #b67d55;
-  --warm-600: #9f6844;
+  --warm: #d8b48a;
+  --warm-600: #c39b6d;
 
   --danger: #c96b6b;
-  --success: #5f9b77;
+  --success: #6f9b7d;
 
-  --border: rgba(255, 255, 255, 0.08);
-  --border-soft: rgba(255, 255, 255, 0.05);
-  --border-strong: rgba(199, 168, 107, 0.22);
+  --border: rgba(44, 36, 29, 0.08);
+  --border-soft: rgba(44, 36, 29, 0.05);
+  --border-strong: rgba(201, 123, 99, 0.22);
 
-  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.22);
-  --shadow: 0 18px 55px rgba(0, 0, 0, 0.44);
-  --shadow-lg: 0 28px 80px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 8px 20px rgba(88, 68, 52, 0.08);
+  --shadow: 0 18px 45px rgba(88, 68, 52, 0.12);
+  --shadow-lg: 0 28px 70px rgba(88, 68, 52, 0.16);
 
-  --glow-primary: 0 0 0 1px rgba(199, 168, 107, 0.12), 0 12px 34px rgba(199, 168, 107, 0.14);
-  --glow-accent: 0 0 0 1px rgba(143, 148, 155, 0.1), 0 10px 30px rgba(143, 148, 155, 0.1);
+  --glow-primary: 0 0 0 1px rgba(201, 123, 99, 0.10), 0 12px 30px rgba(201, 123, 99, 0.14);
+  --glow-accent: 0 0 0 1px rgba(143, 166, 142, 0.10), 0 10px 26px rgba(143, 166, 142, 0.12);
 
   --radius: 16px;
   --radius-md: 18px;
@@ -51,7 +51,62 @@
   --h2: clamp(1.6rem, 2.6vw, 2.2rem);
   --p: 1rem;
 
-  --gradient-primary: linear-gradient(135deg, #c7a86b 0%, #8f949b 100%);
-  --gradient-surface: linear-gradient(180deg, rgba(28, 29, 32, 0.96) 0%, rgba(16, 17, 19, 0.94) 100%);
-  --gradient-card: linear-gradient(180deg, rgba(34, 35, 39, 0.92) 0%, rgba(24, 25, 28, 0.92) 100%);
+  --gradient-primary: linear-gradient(135deg, #c97b63 0%, #8fa68e 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(255, 251, 245, 0.96) 0%, rgba(244, 237, 228, 0.94) 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 249, 241, 0.94) 0%, rgba(246, 239, 231, 0.92) 100%);
+
+  /* tokens semánticos */
+  --glass-soft: rgba(255, 255, 255, 0.42);
+  --glass-strong: rgba(255, 250, 243, 0.72);
+
+  --primary-soft-bg: rgba(201, 123, 99, 0.08);
+  --primary-soft-bg-hover: rgba(201, 123, 99, 0.12);
+  --primary-border: rgba(201, 123, 99, 0.18);
+  --primary-border-strong: rgba(201, 123, 99, 0.24);
+
+  --accent-soft-bg: rgba(143, 166, 142, 0.10);
+  --accent-border: rgba(143, 166, 142, 0.18);
+
+  --panel-bg: var(--gradient-surface);
+  --panel-card-bg: var(--gradient-card);
+  --panel-stroke: var(--border);
+  --panel-highlight: rgba(255, 255, 255, 0.55);
+
+  --fx-orb-primary: radial-gradient(circle, rgba(201, 123, 99, 0.18), transparent 65%);
+  --fx-orb-accent: radial-gradient(circle, rgba(143, 166, 142, 0.18), transparent 65%);
+  --fx-glow-primary: radial-gradient(circle, rgba(201, 123, 99, 0.20), transparent 55%);
+  --fx-glow-accent: radial-gradient(circle, rgba(143, 166, 142, 0.16), transparent 55%);
+
+  --fx-grid-line: rgba(44, 36, 29, 0.06);
+  --fx-scan-line: linear-gradient(180deg, transparent, rgba(216, 180, 138, 0.18), transparent);
+
+  --shadow-elevated: 0 24px 60px rgba(88, 68, 52, 0.14);
+  --shadow-accent: 0 10px 28px rgba(201, 123, 99, 0.10);
+
+  --contact-item-bg: var(--panel-card-bg);
+--contact-item-bg-hover: linear-gradient(180deg, var(--card) 0%, var(--bg-elevated) 100%);
+--contact-item-border: var(--panel-stroke);
+--contact-item-border-hover: var(--primary-border-strong);
+--contact-item-text: var(--muted-strong);
+--contact-item-text-hover: var(--text);
+--contact-item-shadow: var(--shadow-sm);
+--contact-item-shadow-hover: var(--glow-primary);
+
+--experience-period-bg: var(--primary-soft-bg);
+--experience-period-border: var(--primary-border);
+
+--experience-tag-bg: var(--accent-soft-bg);
+--experience-tag-border: var(--accent-border);
+--experience-tag-text: var(--text);
+
+--card-bg: var(--gradient-card);
+--card-border: var(--border);
+--card-shadow: var(--shadow-sm);
+--card-highlight: rgba(255, 255, 255, 0.55);
+
+--footer-border: var(--border);
+--footer-bg: linear-gradient(180deg, rgba(255, 251, 245, 0.96) 0%, rgba(244, 237, 228, 0.94) 100%);
+--footer-highlight: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+--footer-text: var(--muted);
+--footer-text-soft: var(--text-soft);
 }

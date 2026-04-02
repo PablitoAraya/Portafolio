@@ -7,13 +7,20 @@ html {
 }
 
 body {
+  margin: 0;
+  font-family: var(--font);
   background:
-    radial-gradient(circle at top left, rgba(139, 124, 255, 0.16), transparent 28%),
-    radial-gradient(circle at top right, rgba(94, 234, 212, 0.10), transparent 24%),
-    radial-gradient(circle at bottom center, rgba(255, 184, 107, 0.08), transparent 22%),
-    var(--bg);
+    radial-gradient(circle at top left, rgba(201, 123, 99, 0.14), transparent 26%),
+    radial-gradient(circle at top right, rgba(143, 166, 142, 0.12), transparent 24%),
+    radial-gradient(circle at bottom center, rgba(216, 180, 138, 0.12), transparent 22%),
+    linear-gradient(180deg, #fcfaf6 0%, #f7f2ea 48%, #fdfbf8 100%);
   color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
+
+
 
 a {
   color: inherit;
@@ -41,7 +48,7 @@ a {
 
 .kbd {
   border: 1px solid var(--border);
-  background: rgba(148, 163, 184, 0.06);
+  background: rgba(255, 255, 255, 0.04);
   padding: 3px 8px;
   border-radius: 10px;
   font-size: 12px;

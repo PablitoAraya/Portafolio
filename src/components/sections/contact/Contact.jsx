@@ -7,11 +7,10 @@ const Contact = () => {
     <section id="contact" className="section">
       <SectionTitle
         title="Contacto"
-        subtitle="Conversemos. Disponible para proyectos freelance o posiciones full-time."
       />
 
       <div className="contact__grid">
-        <a className="contact__item" href="mailto:pabloarsol@email.com">pabloarsol@email.com</a>
+        <a className="contact__item" href="mailto:pabloarsol@email.com">pabloarsol@gmail.com</a>
         <a className="contact__item" href="https://www.linkedin.com/in/jose-pablo-araya-solis-18a4951b7/" target="_blank" rel="noreferrer">
           linkedin.com/in/jose-pablo-araya-solis
         </a>

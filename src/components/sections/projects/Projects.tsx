@@ -1,10 +1,9 @@
 import SectionTitle from "../../ui/SectionTitle/SectionTitle";
 import Card from "../../ui/card/Card";
-import { projects } from "../../../data/projects";
 import { useLanguage } from "../../../i18n/LanguageProvider";
 import "./Projects.css";
 
-type Project = {
+type ProjectItem = {
   title: string;
   description: string;
   tech: string[];
@@ -21,7 +20,7 @@ const Projects = () => {
       />
 
       <div className="projects__grid">
-        {projects.map((project: Project, index: number) => (
+        {t.projects.items.map((project: ProjectItem, index: number) => (
           <Card key={index}>
             <h3 className="projects__title">{project.title}</h3>
             <p className="projects__desc">{project.description}</p>

@@ -16,7 +16,7 @@ const Footer = () => {
         </motion.span>
 
         <motion.span className="footer__muted" whileHover={{ y: -1 }}>
-          Built with React
+          {/* Built with React */}
         </motion.span>
       </div>
     </motion.footer>
